@@ -5,7 +5,7 @@
 <!-- Mirrored from themihub.com/html/morex-bootstrap/morex/index-2-dark.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 18:01:36 GMT -->
 <head>
   <meta charset="utf-8">
-  <title>Morex - Personal Portfolio HTML Template</title>
+  <title>Oasif Sadik Jisan</title>
   <meta name="description" content="Morden Bootstrap HTML5 Template">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/x-icon" href="{{ asset('fontend') }}/assets/img/favicon.ico">
