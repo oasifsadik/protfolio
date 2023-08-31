@@ -18,13 +18,30 @@ Dashboard
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Category Name</th>
+                            <th>project Name</th>
+                            <th>Project Category</th>
+                            <th>Project Languages</th>
+                            <th>Project Image</th>
                             <th>Description</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-
+                       @foreach ($projects as $item)
+                           <tr>
+                            <td>{{ $item->project_name }}</td>
+                            <td>{{ $item->Category->category_name }}</td>
+                            <td>{{ $item->languages }}</td>
+                            <td>
+                                <img src="{{ asset('product/'.$item->project_image) }}" height="80px" width="70px" alt="">
+                            </td>
+                            <td>{{ $item->description }}</td>
+                            <td>
+                                <a href="">edit</a>
+                                <a href="">delete</a>
+                            </td>
+                           </tr>
+                       @endforeach
                     </tbody>
                 </table>
             </div>

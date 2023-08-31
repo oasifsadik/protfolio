@@ -35,6 +35,7 @@ Route::controller(ProjectController::class)->group(function(){
     Route::get('admin/project','index');
     Route::get('project','project');
     Route::post('project/save','store');
+    Route::get('project/allProject','show');
 });
 Route::controller(FontendController::class)->group(function(){
     Route::get('/','index');

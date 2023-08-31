@@ -20,8 +20,13 @@ Dashboard
                     <input type="text" name="project_name" id="project_name" class="form-control" placeholder="Enter Project Name">
                 </div>
                 <div class="from-group mb-3">
-                    <label for="project">Poject</label>
-                    <input type="text" name="project" id="project" class="form-control" placeholder="Enter Project">
+                    <label for="category_id">Select Category</label>
+                    <select class="form-control" name="cat_id" id="cat_id">
+                        @foreach ($category as $cat)
+                        <option value="{{ $cat->id }}">{{ $cat->category_name }}</option>
+                        @endforeach
+
+                    </select>
                 </div>
                 <div class="from-group mb-3">
                     <label for="languages">Languages</label>

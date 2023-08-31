@@ -12,9 +12,12 @@ class Project extends Model
     protected $fillable =
     [
         'project_name',
-        'project',
+        'cat_id',
         'languages',
         'project_image',
         'description',
     ];
+    public function Category(){
+        return $this->belongsTo(Category::class,'cat_id','id');
+    }
 }
