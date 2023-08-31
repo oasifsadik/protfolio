@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Fontend\FontendController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -29,6 +30,11 @@ Route::controller(DashboardController::class)->group(function(){
     Route::get('admin/category/edit/{id}','edit');
     Route::post('admin/update/{id}','update');
     Route::get('admin/delete/{id}','delete');
+});
+Route::controller(ProjectController::class)->group(function(){
+    Route::get('admin/project','index');
+    Route::get('project','project');
+    Route::post('project/save','store');
 });
 Route::controller(FontendController::class)->group(function(){
     Route::get('/','index');
