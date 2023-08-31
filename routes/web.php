@@ -23,8 +23,12 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 Route::controller(DashboardController::class)->group(function(){
     Route::get('admin/dashboard','index');
+    Route::get('admin/allCategory','show');
     Route::get('admin/category','category');
     Route::post('admin/category/store','store');
+    Route::get('admin/category/edit/{id}','edit');
+    Route::post('admin/update/{id}','update');
+    Route::get('admin/delete/{id}','delete');
 });
 Route::controller(FontendController::class)->group(function(){
     Route::get('/','index');
